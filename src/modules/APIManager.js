@@ -21,25 +21,25 @@ export default Object.create(null, {
         }
     },
     add: {
-        value: (resource, object) => {
+        value: (resource, item) => {
             return fetch(`${remoteURL}/${resource}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(object)
+                body: JSON.stringify(item)
             })
             .then(result => result.json())
         }
     },
     edit: {
-        value: (resource, id, object) => {
+        value: (resource, id, item) => {
             return fetch(`${remoteURL}/${resource}/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(object)
+                body: JSON.stringify(item)
             })
             .then(result => result.json())
         }

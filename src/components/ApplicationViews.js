@@ -42,6 +42,12 @@ export default class ApplicationViews extends Component {
             animals: animals
         }))
 
+    editAnimal = (id, animals) => APIManager.edit("animals", id, animals)
+        .then(() => APIManager.getAll("animals"))
+        .then(animals => this.setState({
+            animals: animals
+        }))
+
     addOwner = owner => APIManager.add("owners", owner)
         .then(() => APIManager.getAll("owners"))
         .then(owners => this.setState({
@@ -49,6 +55,12 @@ export default class ApplicationViews extends Component {
         }))
 
     deleteOwner = id => APIManager.delete("owners", id)
+        .then(() => APIManager.getAll("owners"))
+        .then(owners => this.setState({
+            owners: owners
+        }))
+
+    editOwner = (id, owners) => APIManager.edit("owners", id, owners)
         .then(() => APIManager.getAll("owners"))
         .then(owners => this.setState({
             owners: owners
@@ -66,6 +78,12 @@ export default class ApplicationViews extends Component {
             employees: employees
         }))
 
+    editEmployee = (id, employees) => APIManager.edit("employees", id, employees)
+        .then(() => APIManager.getAll("employees"))
+        .then(employees => this.setState({
+            employees: employees
+        }))
+
     addLocation = location => APIManager.add("locations", location)
         .then(() => APIManager.getAll("locations"))
         .then(locations => this.setState({
@@ -73,6 +91,12 @@ export default class ApplicationViews extends Component {
         }))
 
     deleteLocation = id => APIManager.delete("locations", id)
+        .then(() => APIManager.getAll("locations"))
+        .then(locations => this.setState({
+            locations: locations
+        }))
+
+    editLocation = (id, locations) => APIManager.edit("locations", id, locations)
         .then(() => APIManager.getAll("locations"))
         .then(locations => this.setState({
             locations: locations

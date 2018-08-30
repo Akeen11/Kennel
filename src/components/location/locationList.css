@@ -42,3 +42,8 @@
 .map {
     text-align: center
 }
+
+.icon--map {
+    width: 1000px;
+    height: 500px
+}
