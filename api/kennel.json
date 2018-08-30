@@ -1,0 +1,27 @@
+{
+  "employees": [
+    {
+      "name": "asdf",
+      "id": 2
+    },
+    {
+      "name": "asdf",
+      "id": 3
+    }
+  ],
+  "animals": [],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "500 Circle Way"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "10101 Binary Court"
+    }
+  ],
+  "owners": [],
+  "animalOwners": []
+}
